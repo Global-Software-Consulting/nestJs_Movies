@@ -8,6 +8,7 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
@@ -15,6 +16,7 @@ import { Role } from '../roles.enum';
 import { GenreDto } from './genre.dto';
 import { GenresService } from './genres.service';
 
+@ApiTags('genres')
 @Controller('genres')
 export class GenresController {
   constructor(private genresService: GenresService) {}

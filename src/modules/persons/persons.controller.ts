@@ -8,6 +8,7 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
@@ -15,6 +16,7 @@ import { Role } from '../roles.enum';
 import { PersonDto } from './personDTO';
 import { PersonsService } from './persons.service';
 
+@ApiTags('persons')
 @Controller('persons')
 export class PersonsController {
   constructor(private personServices: PersonsService) {}

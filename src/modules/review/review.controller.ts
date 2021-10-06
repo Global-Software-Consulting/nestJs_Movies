@@ -6,12 +6,14 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
 import { Role } from '../roles.enum';
 import { ReviewService } from './review.service';
 
+@ApiTags('review')
 @Controller('review')
 export class ReviewController {
   constructor(private reviewServices: ReviewService) {}

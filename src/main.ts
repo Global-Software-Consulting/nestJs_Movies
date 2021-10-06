@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { NestFactory } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';

@@ -6,12 +6,14 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
 import { Role } from '../roles.enum';
 import { RatingService } from './rateing.service';
 
+@ApiTags('rating')
 @Controller('user/rating')
 export class RateingController {
   constructor(private rateServices: RatingService) {}

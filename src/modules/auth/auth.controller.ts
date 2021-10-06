@@ -30,7 +30,7 @@ import {
 } from '@nestjs/swagger';
 import { LoginDto } from './login.dto';
 import { localAuthGuard } from './guards/local-guard';
-
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
   constructor(

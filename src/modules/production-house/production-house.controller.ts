@@ -7,12 +7,14 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
 import { Role } from '../roles.enum';
 import { ProductionHouseService } from './production-house.service';
 
+@ApiTags('productionHouse')
 @Controller('productionhouse')
 export class ProductionHouseController {
   constructor(private proHService: ProductionHouseService) {}

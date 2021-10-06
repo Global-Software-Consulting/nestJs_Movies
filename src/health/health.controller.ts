@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import {
   HealthCheck,
   HealthCheckService,
@@ -8,6 +9,7 @@ import {
 import { Connection } from 'sequelize/types/lib/connection-manager';
 import { sequelize } from 'src/core/database/database.providers';
 
+@ApiTags('health')
 @Controller('health')
 export class HealthController {
   constructor(

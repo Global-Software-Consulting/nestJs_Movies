@@ -21,7 +21,9 @@ import { diskStorage } from 'multer';
 import { User } from '../users/user.entity';
 import { of } from 'rxjs';
 import { join } from 'path';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('profile')
 @Controller('auth/user/profile')
 export class ProfileController {
   constructor(private profileServices: ProfileService) {}
