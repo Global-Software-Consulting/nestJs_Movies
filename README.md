@@ -51,7 +51,7 @@ The environment variables can be found and modified in the `.env` file. They com
 | env             |     DummyData      |
 |---------------------|---------------|
 | DB_HOST             | dbhost        |
-| DB_PORT             | 5432          |
+| DB_PORT             | PORT          |
 | DB_USER             | USER|
 | DB_PASS             | PASS  |
 | DB_DIALECT          | postgres      |
@@ -59,7 +59,7 @@ The environment variables can be found and modified in the `.env` file. They com
 | DB_NAME_DEVELOPMENT | dbName        |
 | DB_NAME_PRODUCTION  | dbName        |
 | JWTKEY              | JWTSecret        |
-| TOKEN_EXPIRATION    | 12h           |
+| TOKEN_EXPIRATION    | Time         |
 | BEARER              | Bearer        |
 | GOOGLE_SECRET       | GOOGLE_SECRET |
 | CLIENT_ID           | CLIENT_ID     |
@@ -73,7 +73,7 @@ The environment variables can be found and modified in the `.env` file. They com
 
 #### Step 2: cd to the cloned repo.
 
-#### Step 4: Make sure you add the requires env in .env file 
+#### Step 4: Make sure you add the requires env in .env file check .env.example for help
 
 #### Step 3: Install the npm modules required for the project with npm install
 
