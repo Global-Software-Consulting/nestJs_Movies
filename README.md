@@ -1,31 +1,22 @@
+
+
+
 ![Nest](uploads/logo.png)
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="" width="320" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript repository that demonstrates the CURD of user and movies and all associate entities like, role base access JWT authentication.
+
+### Technologies implemented:
+-   [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) (ORM) + [PostgreSQL](https://www.postgresql.org/)
+-   [JWT](https://jwt.io/)
+-   [Jest](https://jestjs.io/)
+-   [Swagger](https://swagger.io/)
+
+## Prerequisites
+
+-   [Node.js](https://nodejs.org/) (>= 14.14.36)
+-   [npm](https://www.npmjs.com/) (>= 6.5.0)
+
 
 ## Installation
 
@@ -46,22 +37,36 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Environment Variables
 
-```bash
-# unit tests
-$ npm run test
+The environment variables can be found and modified in the `.env` file. They come with these default values:
 
-# e2e tests
-$ npm run test:e2e
+| evv              |     DummyData      |
+|---------------------|---------------|
+| DB_HOST             | dbhost        |
+| DB_PORT             | 5432          |
+| DB_USER             | postgres      |
+| DB_PASS             | postgres      |
+| DB_DIALECT          | postgres      |
+| DB_NAME_TEST        | dbName        |
+| DB_NAME_DEVELOPMENT | dbName        |
+| DB_NAME_PRODUCTION  | dbName        |
+| JWTKEY              | JWTKEY        |
+| TOKEN_EXPIRATION    | 12h           |
+| BEARER              | Bearer        |
+| NODE_ENV            | DEVELOPMENT   |
+| GOOGLE_SECRET       | GOOGLE_SECRET |
+| CLIENT_ID           | CLIENT_ID     |
+| APP_ID              | APP_ID        |
+| APP_SECRET          | APP_SECRET    |
 
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+
+
 
 ## Stay in touch
 
