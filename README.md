@@ -48,20 +48,19 @@
 
 The environment variables can be found and modified in the `.env` file. They come with these default values:
 
-| evv              |     DummyData      |
+| env             |     DummyData      |
 |---------------------|---------------|
 | DB_HOST             | dbhost        |
 | DB_PORT             | 5432          |
-| DB_USER             | postgres      |
-| DB_PASS             | postgres      |
+| DB_USER             | USER|
+| DB_PASS             | PASS  |
 | DB_DIALECT          | postgres      |
 | DB_NAME_TEST        | dbName        |
 | DB_NAME_DEVELOPMENT | dbName        |
 | DB_NAME_PRODUCTION  | dbName        |
-| JWTKEY              | JWTKEY        |
+| JWTKEY              | JWTSecret        |
 | TOKEN_EXPIRATION    | 12h           |
 | BEARER              | Bearer        |
-| NODE_ENV            | DEVELOPMENT   |
 | GOOGLE_SECRET       | GOOGLE_SECRET |
 | CLIENT_ID           | CLIENT_ID     |
 | APP_ID              | APP_ID        |
