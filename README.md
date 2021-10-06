@@ -7,11 +7,11 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript repository that demonstrates the CURD of user and movies and all associate entities like, role base access JWT authentication.
 
 ### Technologies implemented:
--   [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) (ORM) + [PostgreSQL](https://www.postgresql.org/)
--   [JWT](https://jwt.io/)
--   [OAuth 2.0](https://oauth.net/2/)
 -   [Nest](https://Nestjs.io/)
+-   [PostgreSQL](https://www.postgresql.org/) + [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) (ORM)
+-   [JWT](https://jwt.io/)
 -   [Swagger](https://swagger.io/)
+-   [OAuth 2.0](https://oauth.net/2/)
 
 ## Prerequisites
 
