@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { PassportStrategy } from '@nestjs/passport';
@@ -39,7 +40,7 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
       accountId: id,
       accessToken,
     };
-    let userCreat = new SocialUserDto();
+    const userCreat = new SocialUserDto();
     const payload = {
       user,
       accessToken,

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Inject, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { REVIEW_REPOSITORY } from 'src/core/constants';
@@ -18,7 +19,7 @@ export class ReviewService {
     console.log(token);
     const json: any = this.jwtService.decode(token);
     console.log(json.id);
-    let review = {
+    const review = {
       userID: json.id,
       movieID: req.body.movieID,
       rate: req.body.review,
