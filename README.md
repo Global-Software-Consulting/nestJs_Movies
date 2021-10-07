@@ -29,21 +29,19 @@
 
 ## Code Structure
   we tried to implement the best practice of code structure in our project following are the example
-  ```bash
-  # all basic setup like database and constant that we need throughout application will fall in core folder
+ 
+ #### all code go in src folder
   - src/core/databse/*ts
-  # middleware like file uploader will fall in middleware folder 
   - src/middlewares/*.ts
-  # all the modules like user,movies  will fall in module folder uder there own folder 
-  - src/modules/*/*.module.ts
-  - src/modules/*/*.service.ts
-  - src/modules/*/*.controllers.ts
-  - src/modules/*/*.provider.ts
-  # swagger documentation 
+  - src/modules/* /*.module.ts
+  - src/modules/* /*.service.ts
+  - src/modules/* /*.controllers.ts
+  - src/modules/* /*.provider.ts
+ #### swagger documentation 
   - documentation/*
-  # all java script files will build inthis distination folder
+ #### all java script files will build in this dist folder
   - dist/*
-  ```
+
 ## Environment Variables
 
 The environment variables can be found and modified in the `.env` file. They come with these default values:
