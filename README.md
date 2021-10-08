@@ -11,7 +11,7 @@
 -   [PostgreSQL](https://www.postgresql.org/) + [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) (ORM)
 -   [JWT](https://jwt.io/)
 -   [Swagger](https://swagger.io/)
--   [OAuth 2.0](https://oauth.net/2/)
+-   [OAuth](https://oauth.net/)
 
 ## Prerequisites
 
