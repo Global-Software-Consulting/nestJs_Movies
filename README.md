@@ -9,7 +9,7 @@
 ### Technologies implemented:
 -   [Nest](https://Nestjs.io/)
 -   [PostgreSQL](https://www.postgresql.org/) + [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) (ORM)
--   [JWT](https://jwt.io/)
+-   [JWT TOKEN](https://jwt.io/)
 -   [Swagger](https://swagger.io/)
 -   [OAuth](https://oauth.net/)
 
