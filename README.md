@@ -4,7 +4,7 @@
 ![Nest](uploads/logo.png)
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript repository that demonstrates the CURD of user and movies and all associate entities like, role base access JWT authentication.
+We have created a demo aap of [Nest](https://github.com/nestjs/nest) that demonstrates the CURD of user and movies and all associate entities and we have integrated the following technology in our app.
 
 ### Technologies implemented:
 -   [Nest](https://Nestjs.io/)
