@@ -43,7 +43,7 @@ export class MovieController {
     description: 'the resource created successfully ',
   })
   @ApiForbiddenResponse({ description: 'forbidden' })
-  @ApiBody({ type: [MovieDto] })
+  @ApiBody({ type: MovieDto })
   async Add(@Request() req) {
     console.log(req.body);
     const obj: MovieDto = req.body;
@@ -128,6 +128,7 @@ export class MovieController {
     type: FileUploadDto,
   })
   async uploadedFile(@Param('id') id: number, @UploadedFile() file) {
+    console.log('FILE:', file.filename);
     const movie = await this.movieServices.findOneById(id);
     movie.coverPhoto = file.filename;
     await movie.save();

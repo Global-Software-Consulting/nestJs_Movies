@@ -8,7 +8,7 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
@@ -24,6 +24,7 @@ export class GenresController {
   @hasRoles(Role.Admin)
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Post('add')
+  @ApiBody({ type: GenreDto })
   async Add(@Request() req) {
     const obj: GenreDto = req.body;
     obj.userId = req.user.id;

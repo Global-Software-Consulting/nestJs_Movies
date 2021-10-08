@@ -22,7 +22,7 @@ export class RatingService {
     const json: any = this.jwtService.decode(token);
     console.log(json.id);
 
-    let rate = {
+    const rate = {
       userID: json.id,
       movieID: req.body.movieID,
       rate: req.body.rate,

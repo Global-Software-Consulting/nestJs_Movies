@@ -44,7 +44,7 @@ export class AuthController {
     description: 'the resource created successfully ',
   })
   @ApiForbiddenResponse({ description: 'forbidden' })
-  @ApiBody({ type: [LoginDto] })
+  @ApiBody({ type: LoginDto })
   async login(@Request() req) {
     console.log(req);
     return await this.authService.login(req.user);

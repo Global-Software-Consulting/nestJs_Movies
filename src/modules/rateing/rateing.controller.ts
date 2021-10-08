@@ -6,11 +6,12 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
 import { Role } from '../roles.enum';
+import { rateDto } from './rate.dto';
 import { RatingService } from './rateing.service';
 
 @ApiTags('rating')
@@ -19,6 +20,7 @@ export class RateingController {
   constructor(private rateServices: RatingService) {}
   @UseGuards(JwtAuthGuard)
   @Post()
+  @ApiBody({ type: rateDto })
   async Add(@Request() req) {
     return await this.rateServices.rateAMovie(req);
   }
