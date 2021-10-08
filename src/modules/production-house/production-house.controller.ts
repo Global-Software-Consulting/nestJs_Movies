@@ -7,19 +7,22 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
 import { hasRoles } from '../auth/decorators/roles.decorators';
 import { JwtAuthGuard } from '../auth/guards/jwt-guards';
 import { RolesGuard } from '../auth/guards/roles-guards';
 import { Role } from '../roles.enum';
 import { ProductionHouseService } from './production-house.service';
+import { ProductionDto } from './ProductionHouse.dto';
 
+@ApiBearerAuth()
 @ApiTags('productionHouse')
 @Controller('productionhouse')
 export class ProductionHouseController {
   constructor(private proHService: ProductionHouseService) {}
-  // @hasRoles(Role.Admin)
-  // @UseGuards(JwtAuthGuard, RolesGuard)
+  @hasRoles(Role.Admin)
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @ApiBody({ type: ProductionDto })
   @Post('add')
   async Add(@Request() req) {
     return await this.proHService.create(req.body);
